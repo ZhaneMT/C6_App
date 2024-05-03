@@ -17,6 +17,10 @@
 		5B4D9A452BCA10A500968129 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A442BCA10A500968129 /* Timer.swift */; };
 		5B4D9A472BCA10BE00968129 /* SchedulePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A462BCA10BE00968129 /* SchedulePage.swift */; };
 		5B4D9A492BCA10CB00968129 /* HobbyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A482BCA10CB00968129 /* HobbyList.swift */; };
+		5B4FBAB72BE2BBAC0096223C /* QS1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FBAB62BE2BBAC0096223C /* QS1.swift */; };
+		5B4FBABB2BE3FEBA0096223C /* QS2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FBABA2BE3FEBA0096223C /* QS2.swift */; };
+		5B4FBABD2BE401A60096223C /* QS3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FBABC2BE401A60096223C /* QS3.swift */; };
+		5B4FBABF2BE401B20096223C /* QS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FBABE2BE401B20096223C /* QS4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		5B4D9A442BCA10A500968129 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = ../Timer.swift; sourceTree = "<group>"; };
 		5B4D9A462BCA10BE00968129 /* SchedulePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePage.swift; sourceTree = "<group>"; };
 		5B4D9A482BCA10CB00968129 /* HobbyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HobbyList.swift; path = ../HobbyList.swift; sourceTree = "<group>"; };
+		5B4FBAB62BE2BBAC0096223C /* QS1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QS1.swift; sourceTree = "<group>"; };
+		5B4FBABA2BE3FEBA0096223C /* QS2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QS2.swift; sourceTree = "<group>"; };
+		5B4FBABC2BE401A60096223C /* QS3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QS3.swift; sourceTree = "<group>"; };
+		5B4FBABE2BE401B20096223C /* QS4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QS4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 			children = (
 				5B4D9A132BCA0B1E00968129 /* C6_AppApp.swift */,
 				5B4D9A152BCA0B1E00968129 /* ContentView.swift */,
+				5B4FBAB52BE2BA970096223C /* Questionare Screens */,
 				5B4D9A442BCA10A500968129 /* Timer.swift */,
 				5B4D9A462BCA10BE00968129 /* SchedulePage.swift */,
 				5B4D9A482BCA10CB00968129 /* HobbyList.swift */,
@@ -136,6 +145,17 @@
 				5B4D9A312BCA0B1F00968129 /* C6_AppUITestsLaunchTests.swift */,
 			);
 			path = C6_AppUITests;
+			sourceTree = "<group>";
+		};
+		5B4FBAB52BE2BA970096223C /* Questionare Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5B4FBAB62BE2BBAC0096223C /* QS1.swift */,
+				5B4FBABA2BE3FEBA0096223C /* QS2.swift */,
+				5B4FBABC2BE401A60096223C /* QS3.swift */,
+				5B4FBABE2BE401B20096223C /* QS4.swift */,
+			);
+			path = "Questionare Screens";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B4D9A452BCA10A500968129 /* Timer.swift in Sources */,
+				5B4FBABF2BE401B20096223C /* QS4.swift in Sources */,
+				5B4FBABB2BE3FEBA0096223C /* QS2.swift in Sources */,
+				5B4FBAB72BE2BBAC0096223C /* QS1.swift in Sources */,
+				5B4FBABD2BE401A60096223C /* QS3.swift in Sources */,
 				5B4D9A162BCA0B1E00968129 /* ContentView.swift in Sources */,
 				5B4D9A142BCA0B1E00968129 /* C6_AppApp.swift in Sources */,
 				5B4D9A492BCA10CB00968129 /* HobbyList.swift in Sources */,
