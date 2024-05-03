@@ -10,6 +10,9 @@ import SwiftUI
 @main
 struct C6_AppApp: App {
     var body: some Scene {
+        WindowGroup{
+            QS1()
+        }
         WindowGroup {
             ContentView()
         }
