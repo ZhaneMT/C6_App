@@ -103,7 +103,7 @@ struct QS4: View {
                     .padding(15)
                 }
                 
-                NavigationLink(destination:SchedulePage()
+                NavigationLink(destination:ContentView()
                     .navigationBarBackButtonHidden(true)){
                     Image(systemName:"chevron.right")
                         .foregroundColor(.green)

@@ -14,10 +14,14 @@ struct SchedulePage: View {
         
         VStack{
             ZStack{
-                Image("Path")
+                /*Image("Path")
+                 */
+                Rectangle()
+                    .frame(width:500,height:150)
                 Text("Planner")
                     .bold()
                     .font(.largeTitle)
+                    .foregroundColor(.white)
                 HStack{
                     Button(action: {
                     }) {
