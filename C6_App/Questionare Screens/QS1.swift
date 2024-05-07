@@ -32,7 +32,7 @@ struct QS1: View{
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 }
                 Spacer()
-                    NavigationLink(destination: QS2().navigationBarBackButtonHidden(true)){
+                    NavigationLink(destination:QS2().navigationBarBackButtonHidden(true)){
                         Text("Yes ")
                             .frame(minWidth: 0, maxWidth:300)
                             .font(.largeTitle)
@@ -42,7 +42,7 @@ struct QS1: View{
                             .cornerRadius(10)
                             .padding(15)
                     }
-                    NavigationLink(destination: SchedulePage().navigationBarBackButtonHidden(true)){                     Text("No")
+                    NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true)){                     Text("No")
                             .frame(minWidth: 100, maxWidth:300)
                             .font(.largeTitle)
                             .bold()

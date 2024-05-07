@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection = 1
-//This private variable helps set a prefence to originally open to the schedule screen. (HOWEVER THIS MAY CHANGE)
     var body: some View {
-        TabView (selection: $selection) {
+        TabView () {
             Timer()
                 .tabItem {
                     Label("Timer", systemImage:"timer")
