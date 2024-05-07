@@ -26,7 +26,10 @@ struct QS2: View {
                     Capsule()
                         .frame(width: 350, height: 10)
                         .foregroundColor(Color(red: 0.82, green: 0.82, blue: 0.84))
-                }
+                    Capsule()
+                        .frame(width: 117, height:10)
+                        .foregroundColor(.green)
+                                        }
                 VStack {
                     Button(action: {
                         self.Monday.toggle()
@@ -127,7 +130,8 @@ struct QS2: View {
                     }
                     .padding(15)
                 }
-                    NavigationLink(destination: QS3()){
+                NavigationLink(destination: QS3(Monday:$Monday, Tuesday: $Tuesday, Wednesday: $Wenesday, Thursday: $Thursday, Friday: $Friday, Saturday: $Saturday, Sunday: $Sunday)
+                    .navigationBarBackButtonHidden(true)){
                         Image(systemName:"chevron.right")
                             .foregroundColor(.green)
                             .bold()
@@ -135,8 +139,6 @@ struct QS2: View {
                         Text("Next")
                             .font(.title)
                             .foregroundColor(Color(.green))
-                            
-                        
                     }
                 }
                 
