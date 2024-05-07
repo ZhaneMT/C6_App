@@ -31,18 +31,57 @@ struct SchedulePage: View {
             .padding(.trailing, 100.0)
             .frame(width: 50.0, height: 140.0)
             .ignoresSafeArea()
-            
-            
             Spacer()
             ScrollView{
-                HStack{
-                Text("8:00 AM")
-                        .bold()
-                        .font(.title3)
-                        .italic()
-                    Rectangle()
-                        .frame(width: 300, height: 3)
-        
+                VStack{
+                    HStack{
+                        Text("8:00 AM")
+                            .bold()
+                            .font(.title3)
+                            .italic()
+                        Rectangle()
+                            .frame(width: 270, height: 3)
+                    }
+                    HStack{
+                    Text("9:00 AM")
+                            .bold()
+                            .font(.title3)
+                            .italic()
+                        Rectangle()
+                            .frame(width: 270, height: 3)
+                    }
+                    HStack{
+                    Text("10:00 AM")
+                            .bold()
+                            .font(.title3)
+                            .italic()
+                        Rectangle()
+                            .frame(width: 270, height: 3)
+                    }
+                    HStack{
+                    Text("11:00 AM")
+                            .bold()
+                            .font(.title3)
+                            .italic()
+                        Rectangle()
+                            .frame(width: 270, height: 3)
+                    }
+                    HStack{
+                    Text("12:00 AM")
+                            .bold()
+                            .font(.title3)
+                            .italic()
+                        Rectangle()
+                            .frame(width: 270, height: 3)
+                    }
+                    HStack{
+                    Text("1:00 PM")
+                            .bold()
+                            .font(.title3)
+                            .italic()
+                        Rectangle()
+                            .frame(width: 270, height: 3)
+                    }
                 }
             }
             
@@ -56,3 +95,7 @@ struct SchedulePage: View {
 #Preview {
     SchedulePage()
 }
+//--------------------------------------------------------------
+#Preview {
+            SchedulePage()
+        }

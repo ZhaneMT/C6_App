@@ -24,13 +24,16 @@ struct QS4: View {
                     Capsule()
                         .frame(width: 350, height: 10)
                         .foregroundColor(Color(red: 0.82, green: 0.82, blue: 0.84))
-                }
+                    Capsule()
+                        .frame(width: 350, height:10)
+                        .foregroundColor(.green)
+                                        }
                 VStack {
                     Button(action: {
                         self.Sleeping.toggle()
                     }) {
                         Label("", systemImage: "")
-                            .font(.largeTitle)
+                            .font(.title)
                         Text("Sleeping")
                             .frame(minWidth: 0, maxWidth: 300)
                             .font(.largeTitle)
@@ -100,7 +103,8 @@ struct QS4: View {
                     .padding(15)
                 }
                 
-                NavigationLink(destination:SchedulePage()){
+                NavigationLink(destination:SchedulePage()
+                    .navigationBarBackButtonHidden(true)){
                     Image(systemName:"chevron.right")
                         .foregroundColor(.green)
                         .bold()
