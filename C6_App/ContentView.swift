@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+       
         TabView () {
+
             Timer()
                 .tabItem {
                     Label("Timer", systemImage:"timer")
@@ -28,10 +30,11 @@ struct ContentView: View {
             UITabBar.appearance().backgroundColor = .none
         }
         .tint(.brown)
-        
-//THE CODE FROM .OnAppear() to .tint all help change the colors of the tab bar.
+
+            //THE CODE FROM .OnAppear() to .tint all help change the colors of the tab bar.
+        }
     }
-}
+
 
 #Preview {
     ContentView()
