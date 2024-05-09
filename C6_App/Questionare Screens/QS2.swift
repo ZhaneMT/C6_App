@@ -18,7 +18,7 @@ struct QS2: View {
     var body: some View {
         NavigationView {
             VStack{
-                Text("What days do you work?")
+                Text("What days do you do your routine?")
                     .font(.largeTitle)
                     .bold()
                     .padding(.bottom, 15.0)

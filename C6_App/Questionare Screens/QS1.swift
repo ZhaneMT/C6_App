@@ -13,7 +13,8 @@ struct QS1: View{
         NavigationView{
             VStack {
                 Spacer()
-                Text("Do you have a set routine?")
+                Text("Do you have routine?")
+
                     .font(.largeTitle)
                     .multilineTextAlignment(.leading)
                     .bold()
