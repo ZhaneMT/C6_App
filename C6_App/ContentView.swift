@@ -23,7 +23,7 @@ struct ContentView: View {
                 .tag(1)
             HobbyList()
                 .tabItem{
-                    Label("Hobbies", systemImage:"theatermask.and.paintbrush.fill")
+                    Label("Activities", systemImage:"theatermask.and.paintbrush.fill")
                 }
         }
         .onAppear() {

@@ -18,3 +18,6 @@ struct C6_AppApp: App {
         }
     }
 }
+/*This is how the bindingings will work:
+ 
+ */
