@@ -130,8 +130,7 @@ struct QS2: View {
                     }
                     .padding(15)
                 }
-                NavigationLink(destination: QS3(Monday:$Monday, Tuesday: $Tuesday, Wednesday: $Wenesday, Thursday: $Thursday, Friday: $Friday, Saturday: $Saturday, Sunday: $Sunday)
-                    .navigationBarBackButtonHidden(true)){
+                NavigationLink(destination: QS3(Monday:$Monday, Tuesday: $Tuesday, Wednesday: $Wenesday, Thursday: $Thursday, Friday: $Friday, Saturday: $Saturday, Sunday: $Sunday)){
                         Image(systemName:"chevron.right")
                             .foregroundColor(.green)
                             .bold()
