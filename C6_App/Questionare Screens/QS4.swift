@@ -15,7 +15,7 @@ struct QS4: View {
     var body: some View {
         NavigationView{
             VStack{
-                Text("What hobbies do you have currently?")
+                Text("What do you do for fun?")
                     .font(.largeTitle)
                     .foregroundColor(Color.black)
                     .bold()
