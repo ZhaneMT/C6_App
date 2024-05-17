@@ -10,7 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
        
-        TabView () {
+        TabView {
+            
+            HobbyList()
+                .tabItem{
+                    Label("Activities", systemImage:"theatermask.and.paintbrush.fill")
+                }
             Timer()
                 .tabItem {
                     Label("Timer", systemImage:"timer")
@@ -19,10 +24,7 @@ struct ContentView: View {
                 .tabItem{
                     Label("Schedule", systemImage: "list.clipboard")
                 }
-            HobbyList()
-                .tabItem{
-                    Label("Activities", systemImage:"theatermask.and.paintbrush.fill")
-                }
+          
         }
         .onAppear() {
             UITabBar.appearance().backgroundColor = .none
