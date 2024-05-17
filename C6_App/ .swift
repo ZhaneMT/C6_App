@@ -73,60 +73,61 @@ struct SchedulePage: View {
                         .bold()
                 }
             }
-        }
-        Divider()
-        
-        ScrollView {
-            ForEach(0..<24) { hour in
-                VStack(alignment: .leading) {
-                    HStack {
-                        if hour < 12 {
-                            Text("\(hour == 0 ? 12 : hour):00 AM").foregroundColor(.white)
-                                .bold()
-                                .font(.title2)
-                                .frame(width: 110, height: 50)
-                                .background(
-                                    LinearGradient(colors: [.mint, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
-                                )
-                        } else if hour == 12 {
-                            Text("\(hour):00 PM").foregroundColor(.white)
-                                .bold()
-                                .font(.title2)
-                                .frame(width: 110, height: 50)
-                                .background(
-                                    LinearGradient(colors: [.mint, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
-                                )
-                        } else {
-                            Text("\(hour - 12):00 PM").foregroundColor(.white)
-                                .bold()
-                                .font(.title2)
-                                .frame(width: 110, height: 50)
-                                .background(
-                                    LinearGradient(colors: [.mint, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
-                                )
+            //        }
+            //        Divider()
+            
+            ScrollView {
+                ForEach(0..<24) { hour in
+                    VStack(alignment: .leading) {
+                        HStack {
+                            if hour < 12 {
+                                Text("\(hour == 0 ? 12 : hour):00 AM").foregroundColor(.white)
+                                    .bold()
+                                    .font(.title2)
+                                    .frame(width: 110, height: 50)
+                                    .background(
+                                        LinearGradient(colors: [.mint, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                    )
+                            } else if hour == 12 {
+                                Text("\(hour):00 PM").foregroundColor(.white)
+                                    .bold()
+                                    .font(.title2)
+                                    .frame(width: 110, height: 50)
+                                    .background(
+                                        LinearGradient(colors: [.mint, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                    )
+                            } else {
+                                Text("\(hour - 12):00 PM").foregroundColor(.white)
+                                    .bold()
+                                    .font(.title2)
+                                    .frame(width: 110, height: 50)
+                                    .background(
+                                        LinearGradient(colors: [.mint, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                    )
+                            }
+                            ZStack {
+                                Rectangle()
+                                    .fill(Color(red: 0.82, green: 0.82, blue: 0.84))
+                                    .opacity(0.5)
+                                    .frame(height: 2)
+                            }
                         }
-                        ZStack {
-                            Rectangle()
-                                .fill(Color(red: 0.82, green: 0.82, blue: 0.84))
-                                .opacity(0.5)
-                                .frame(height: 2)
-                        }
-                    }
-                    
-                    ForEach(tasks.filter { Calendar.current.component(.hour, from: $0.startTime) == hour }) { task in
-                        VStack(alignment: .leading) {
-                            Text(task.title)
-                                .font(.headline)
-                                .foregroundColor(.white)
-                            Text("\(task.startTime.printHourMinute()) - \(task.endTime.printHourMinute())")
-                                .font(.subheadline)
-                                .foregroundColor(.white)
-                        }
-                        .padding()
-                        .background(task.color)
-                        .cornerRadius(10)
-                        .shadow(radius: 3)
-                        .frame(maxWidth: .infinity, alignment: .center)
+                        
+                                            ForEach(tasks.filter { Calendar.current.component(.hour, from: $0.startTime) == hour }) { task in
+                                                VStack(alignment: .leading) {
+                                                    Text(task.title)
+                                                        .font(.headline)
+                                                        .foregroundColor(.white)
+                                                    Text("\(task.startTime.printHourMinute()) - \(task.endTime.printHourMinute())")
+                                                        .font(.subheadline)
+                                                        .foregroundColor(.white)
+                                                }
+                                                .padding()
+                                                .background(task.color)
+                                                .cornerRadius(10)
+                                                .shadow(radius: 3)
+                                                .frame(maxWidth: .infinity, alignment: .center)
+                                            }
                     }
                 }
             }
