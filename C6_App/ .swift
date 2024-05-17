@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+let generator = UINotificationFeedbackGenerator()
+
 extension Date {
     func printDay() -> String {
         let dateFormatter = DateFormatter()
@@ -32,8 +34,8 @@ struct Task: Identifiable {
 }
 
 struct SchedulePage: View {
-    @State var showSheet: Bool = false
-    @State var tasks: [Task] = []
+    @State private var showSheet = false
+    @State private var tasks: [Task] = []
     
     var body: some View {
         VStack {
@@ -45,68 +47,86 @@ struct SchedulePage: View {
                     LinearGradient(colors: [.green, .teal], startPoint: .topLeading, endPoint: .bottomTrailing)
                         .frame(width: 450, height: 158)
                 )
+            
             HStack {
                 Circle()
                     .frame(height: 80)
-                    .padding(.leading, 261.0)
                     .foregroundColor(.white)
                     .overlay(
                         Button { showSheet.toggle() } label: {
-                            Label("", systemImage: "plus.circle.fill")
+                            Image(systemName: "plus.circle.fill")
+                                .font(.largeTitle)
+                                .foregroundColor(.green)
                         }
-                        .font(.largeTitle)
-                        .imageScale(.large)
-                        .padding(.leading, 270.0)
-                        .foregroundColor(.green)
-                        .padding(EdgeInsets())
                     )
             }
+            .padding()
             .sheet(isPresented: $showSheet) {
-                SecondScreen(tasks: $tasks)
+                SecondScreen(showSheet: $showSheet, tasks: $tasks)
             }
             
             VStack {
-                Text(Date().printDay())
-                    .font(.title)
-                    .bold()
-                    .underline()
+                HStack{
+                    Image("")
+                    Text(Date().printDay())
+                        .font(.title)
+                        .bold()
+                }
             }
         }
         Divider()
+        
         ScrollView {
-            ForEach(1...12, id: \.self) { hour in
+            ForEach(0..<24) { hour in
                 VStack(alignment: .leading) {
                     HStack {
-                        Text("\(hour):00 PM").foregroundColor(.white)
-                            .bold()
-                            .frame(width: 100, height: 50)
-                            .background(
-                                LinearGradient(colors: [.mint, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
-                            )
-                        Rectangle()
-                            .fill(Color(red: 0.82, green: 0.82, blue: 0.84))
-                            .opacity(0.5)
-                            .overlay(
-                                ForEach (tasks) { task in
-                                    if Calendar.current.isDate(task.startTime, equalTo: Calendar.current.date(bySettingHour: hour + 12, minute: 0, second: 0, of: Date())!, toGranularity: .hour) {
-                                        HStack {
-                                            Rectangle()
-                                                .fill(task.color)
-                                                .frame(height: 50)
-                                                .overlay(
-                                                    VStack(alignment: .leading) {
-                                                        Text(task.title)
-                                                            .foregroundColor(.white)
-                                                            .bold()
-                                                        Text("\(task.startTime.printHourMinute()) - \(task.endTime.printHourMinute())")
-                                                            .foregroundColor(.white)
-                                                    }
-                                                    .padding(5)
-                                                )
-                                        }
-                                    }
-                                }
-                            )
+                        if hour < 12 {
+                            Text("\(hour == 0 ? 12 : hour):00 AM").foregroundColor(.white)
+                                .bold()
+                                .font(.title2)
+                                .frame(width: 110, height: 50)
+                                .background(
+                                    LinearGradient(colors: [.mint, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                )
+                        } else if hour == 12 {
+                            Text("\(hour):00 PM").foregroundColor(.white)
+                                .bold()
+                                .font(.title2)
+                                .frame(width: 110, height: 50)
+                                .background(
+                                    LinearGradient(colors: [.mint, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                )
+                        } else {
+                            Text("\(hour - 12):00 PM").foregroundColor(.white)
+                                .bold()
+                                .font(.title2)
+                                .frame(width: 110, height: 50)
+                                .background(
+                                    LinearGradient(colors: [.mint, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                )
+                        }
+                        ZStack {
+                            Rectangle()
+                                .fill(Color(red: 0.82, green: 0.82, blue: 0.84))
+                                .opacity(0.5)
+                                .frame(height: 2)
+                        }
+                    }
+                    
+                    ForEach(tasks.filter { Calendar.current.component(.hour, from: $0.startTime) == hour }) { task in
+                        VStack(alignment: .leading) {
+                            Text(task.title)
+                                .font(.headline)
+                                .foregroundColor(.white)
+                            Text("\(task.startTime.printHourMinute()) - \(task.endTime.printHourMinute())")
+                                .font(.subheadline)
+                                .foregroundColor(.white)
+                        }
+                        .padding()
+                        .background(task.color)
+                        .cornerRadius(10)
+                        .shadow(radius: 3)
+                        .frame(maxWidth: .infinity, alignment: .center)
                     }
                 }
             }
@@ -115,6 +135,7 @@ struct SchedulePage: View {
 }
 
 struct SecondScreen: View {
+    @Binding var showSheet: Bool
     @Binding var tasks: [Task]
     @State private var taskTitle = ""
     @State private var startTime = Date()
@@ -124,8 +145,10 @@ struct SecondScreen: View {
     var body: some View {
         VStack {
             Button("Done") {
+                generator.notificationOccurred(.success)
                 let newTask = Task(title: taskTitle, startTime: startTime, endTime: endTime, color: selectedColor)
                 tasks.append(newTask)
+                showSheet = false
             }
             .padding(.leading, 250.0)
             .foregroundColor(.green)
@@ -134,7 +157,6 @@ struct SecondScreen: View {
             Text("Create New Task")
                 .font(.largeTitle)
                 .bold()
-            
             TextField("Title", text: $taskTitle)
                 .textFieldStyle(.roundedBorder)
                 .font(.title)
@@ -166,12 +188,7 @@ struct SecondScreen: View {
     }
 }
 
+//--------------------------------------------------------------
 #Preview {
     SchedulePage()
 }
-
-
-//--------------------------------------------------------------
-#Preview {
-            SchedulePage()
-        }

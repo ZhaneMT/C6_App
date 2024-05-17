@@ -11,7 +11,6 @@ struct ContentView: View {
     var body: some View {
        
         TabView () {
-
             Timer()
                 .tabItem {
                     Label("Timer", systemImage:"timer")
@@ -20,7 +19,6 @@ struct ContentView: View {
                 .tabItem{
                     Label("Schedule", systemImage: "list.clipboard")
                 }
-                .tag(1)
             HobbyList()
                 .tabItem{
                     Label("Activities", systemImage:"theatermask.and.paintbrush.fill")
@@ -29,7 +27,7 @@ struct ContentView: View {
         .onAppear() {
             UITabBar.appearance().backgroundColor = .none
         }
-        .tint(.brown)
+        .tint(.green)
 
             //THE CODE FROM .OnAppear() to .tint all help change the colors of the tab bar.
         }
