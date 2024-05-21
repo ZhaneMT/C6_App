@@ -8,21 +8,13 @@
 import SwiftUI
 
 //LOGIC AND GLOBAL FUNCTIONS UP HERE
-struct Timer: View {
+struct Achievement: View {
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .center) {
-               Text("Coming Soon!")
-                    .font(.largeTitle)
-                    .bold()
-                Image("HappyLGreen")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width:250, height: 250)
-                         }
-                     }
+        Text("Variables A Week")
+//ALL VARIABELS and
+                         
                  }
             }
 #Preview {
-    Timer()
+    Achievement()
 }

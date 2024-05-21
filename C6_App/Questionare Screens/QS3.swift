@@ -72,7 +72,7 @@ struct QS3: View {
                         }
                     }
                 }
-                NavigationLink(destination:QS4()
+                NavigationLink(destination: SchedulePage()
                     .navigationBarBackButtonHidden(true)){
                     Image(systemName:"chevron.right")
                         .foregroundColor(.green)
