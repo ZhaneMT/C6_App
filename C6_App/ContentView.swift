@@ -16,15 +16,18 @@ struct ContentView: View {
                 .tabItem{
                     Label("Activities", systemImage:"theatermask.and.paintbrush.fill")
                 }
-            Timer()
-                .tabItem {
-                    Label("Timer", systemImage:"timer")
-                }
             SchedulePage()
                 .tabItem{
                     Label("Schedule", systemImage: "list.clipboard")
                 }
-          
+            Achievement()
+                .tabItem {
+                    Label("Achievements", systemImage:"trophy.fill")
+                }
+          Settings()
+                .tabItem{
+                    Label("Settings", systemImage: "gearshape.fill")
+                }
         }
         .onAppear() {
             UITabBar.appearance().backgroundColor = .none

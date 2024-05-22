@@ -14,13 +14,13 @@
 		5B4D9A262BCA0B1F00968129 /* C6_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A252BCA0B1F00968129 /* C6_AppTests.swift */; };
 		5B4D9A302BCA0B1F00968129 /* C6_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A2F2BCA0B1F00968129 /* C6_AppUITests.swift */; };
 		5B4D9A322BCA0B1F00968129 /* C6_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A312BCA0B1F00968129 /* C6_AppUITestsLaunchTests.swift */; };
-		5B4D9A452BCA10A500968129 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A442BCA10A500968129 /* Timer.swift */; };
+		5B4D9A452BCA10A500968129 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A442BCA10A500968129 /* Achievement.swift */; };
 		5B4D9A472BCA10BE00968129 /*  .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A462BCA10BE00968129 /*  .swift */; };
 		5B4D9A492BCA10CB00968129 /* HobbyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A482BCA10CB00968129 /* HobbyList.swift */; };
 		5B4FBAB72BE2BBAC0096223C /* QS1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FBAB62BE2BBAC0096223C /* QS1.swift */; };
 		5B4FBABB2BE3FEBA0096223C /* QS2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FBABA2BE3FEBA0096223C /* QS2.swift */; };
 		5B4FBABD2BE401A60096223C /* QS3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FBABC2BE401A60096223C /* QS3.swift */; };
-		5B4FBABF2BE401B20096223C /* QS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FBABE2BE401B20096223C /* QS4.swift */; };
+		5B835E3A2BFD2C540009EFEB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B835E392BFD2C540009EFEB /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,13 +52,13 @@
 		5B4D9A2B2BCA0B1F00968129 /* C6_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = C6_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4D9A2F2BCA0B1F00968129 /* C6_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C6_AppUITests.swift; sourceTree = "<group>"; };
 		5B4D9A312BCA0B1F00968129 /* C6_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C6_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5B4D9A442BCA10A500968129 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = ../Timer.swift; sourceTree = "<group>"; };
+		5B4D9A442BCA10A500968129 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Achievement.swift; path = ../Achievement.swift; sourceTree = "<group>"; };
 		5B4D9A462BCA10BE00968129 /*  .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " .swift"; sourceTree = "<group>"; };
 		5B4D9A482BCA10CB00968129 /* HobbyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HobbyList.swift; path = ../HobbyList.swift; sourceTree = "<group>"; };
 		5B4FBAB62BE2BBAC0096223C /* QS1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QS1.swift; sourceTree = "<group>"; };
 		5B4FBABA2BE3FEBA0096223C /* QS2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QS2.swift; sourceTree = "<group>"; };
 		5B4FBABC2BE401A60096223C /* QS3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QS3.swift; sourceTree = "<group>"; };
-		5B4FBABE2BE401B20096223C /* QS4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QS4.swift; sourceTree = "<group>"; };
+		5B835E392BFD2C540009EFEB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +112,9 @@
 				5B4D9A132BCA0B1E00968129 /* C6_AppApp.swift */,
 				5B4D9A152BCA0B1E00968129 /* ContentView.swift */,
 				5B4FBAB52BE2BA970096223C /* Questionare Screens */,
-				5B4D9A442BCA10A500968129 /* Timer.swift */,
-				5B4D9A462BCA10BE00968129 /*  .swift */,
+				5B4D9A442BCA10A500968129 /* Achievement.swift */,
 				5B4D9A482BCA10CB00968129 /* HobbyList.swift */,
+				5B835E392BFD2C540009EFEB /* Settings.swift */,
 				5B4D9A172BCA0B1F00968129 /* Assets.xcassets */,
 				5B4D9A192BCA0B1F00968129 /* C6_App.entitlements */,
 				5B4D9A1A2BCA0B1F00968129 /* Preview Content */,
@@ -153,7 +153,7 @@
 				5B4FBAB62BE2BBAC0096223C /* QS1.swift */,
 				5B4FBABA2BE3FEBA0096223C /* QS2.swift */,
 				5B4FBABC2BE401A60096223C /* QS3.swift */,
-				5B4FBABE2BE401B20096223C /* QS4.swift */,
+				5B4D9A462BCA10BE00968129 /*  .swift */,
 			);
 			path = "Questionare Screens";
 			sourceTree = "<group>";
@@ -288,10 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B4D9A452BCA10A500968129 /* Timer.swift in Sources */,
-				5B4FBABF2BE401B20096223C /* QS4.swift in Sources */,
+				5B4D9A452BCA10A500968129 /* Achievement.swift in Sources */,
 				5B4FBABB2BE3FEBA0096223C /* QS2.swift in Sources */,
 				5B4FBAB72BE2BBAC0096223C /* QS1.swift in Sources */,
+				5B835E3A2BFD2C540009EFEB /* Settings.swift in Sources */,
 				5B4FBABD2BE401A60096223C /* QS3.swift in Sources */,
 				5B4D9A162BCA0B1E00968129 /* ContentView.swift in Sources */,
 				5B4D9A142BCA0B1E00968129 /* C6_AppApp.swift in Sources */,

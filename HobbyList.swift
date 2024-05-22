@@ -2,7 +2,7 @@
 //  HobbyList.swift
 //  C6_Draft
 //
-//  Created by Zhane Moorman-Taylor on 4/12/24.
+//  Created by Alexus Wilson on 4/12/24.
 //
 
 import SwiftUI
