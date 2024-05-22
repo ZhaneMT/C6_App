@@ -113,7 +113,6 @@
 				5B4D9A152BCA0B1E00968129 /* ContentView.swift */,
 				5B4FBAB52BE2BA970096223C /* Questionare Screens */,
 				5B4D9A442BCA10A500968129 /* Achievement.swift */,
-				5B4D9A462BCA10BE00968129 /*  .swift */,
 				5B4D9A482BCA10CB00968129 /* HobbyList.swift */,
 				5B835E392BFD2C540009EFEB /* Settings.swift */,
 				5B4D9A172BCA0B1F00968129 /* Assets.xcassets */,
@@ -154,6 +153,7 @@
 				5B4FBAB62BE2BBAC0096223C /* QS1.swift */,
 				5B4FBABA2BE3FEBA0096223C /* QS2.swift */,
 				5B4FBABC2BE401A60096223C /* QS3.swift */,
+				5B4D9A462BCA10BE00968129 /*  .swift */,
 			);
 			path = "Questionare Screens";
 			sourceTree = "<group>";
