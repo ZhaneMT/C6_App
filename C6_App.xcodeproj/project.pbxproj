@@ -15,12 +15,12 @@
 		5B4D9A302BCA0B1F00968129 /* C6_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A2F2BCA0B1F00968129 /* C6_AppUITests.swift */; };
 		5B4D9A322BCA0B1F00968129 /* C6_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A312BCA0B1F00968129 /* C6_AppUITestsLaunchTests.swift */; };
 		5B4D9A452BCA10A500968129 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A442BCA10A500968129 /* Achievement.swift */; };
-		5B4D9A472BCA10BE00968129 /*  .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A462BCA10BE00968129 /*  .swift */; };
 		5B4D9A492BCA10CB00968129 /* HobbyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D9A482BCA10CB00968129 /* HobbyList.swift */; };
 		5B4FBAB72BE2BBAC0096223C /* QS1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FBAB62BE2BBAC0096223C /* QS1.swift */; };
 		5B4FBABB2BE3FEBA0096223C /* QS2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FBABA2BE3FEBA0096223C /* QS2.swift */; };
 		5B4FBABD2BE401A60096223C /* QS3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FBABC2BE401A60096223C /* QS3.swift */; };
 		5B835E3A2BFD2C540009EFEB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B835E392BFD2C540009EFEB /* Settings.swift */; };
+		5B835E3E2BFFE0170009EFEB /* SchedulePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B835E3D2BFFE0170009EFEB /* SchedulePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +53,12 @@
 		5B4D9A2F2BCA0B1F00968129 /* C6_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C6_AppUITests.swift; sourceTree = "<group>"; };
 		5B4D9A312BCA0B1F00968129 /* C6_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C6_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5B4D9A442BCA10A500968129 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Achievement.swift; path = ../Achievement.swift; sourceTree = "<group>"; };
-		5B4D9A462BCA10BE00968129 /*  .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " .swift"; sourceTree = "<group>"; };
 		5B4D9A482BCA10CB00968129 /* HobbyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HobbyList.swift; path = ../HobbyList.swift; sourceTree = "<group>"; };
 		5B4FBAB62BE2BBAC0096223C /* QS1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QS1.swift; sourceTree = "<group>"; };
 		5B4FBABA2BE3FEBA0096223C /* QS2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QS2.swift; sourceTree = "<group>"; };
 		5B4FBABC2BE401A60096223C /* QS3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QS3.swift; sourceTree = "<group>"; };
 		5B835E392BFD2C540009EFEB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		5B835E3D2BFFE0170009EFEB /* SchedulePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +153,7 @@
 				5B4FBAB62BE2BBAC0096223C /* QS1.swift */,
 				5B4FBABA2BE3FEBA0096223C /* QS2.swift */,
 				5B4FBABC2BE401A60096223C /* QS3.swift */,
-				5B4D9A462BCA10BE00968129 /*  .swift */,
+				5B835E3D2BFFE0170009EFEB /* SchedulePage.swift */,
 			);
 			path = "Questionare Screens";
 			sourceTree = "<group>";
@@ -296,7 +296,7 @@
 				5B4D9A162BCA0B1E00968129 /* ContentView.swift in Sources */,
 				5B4D9A142BCA0B1E00968129 /* C6_AppApp.swift in Sources */,
 				5B4D9A492BCA10CB00968129 /* HobbyList.swift in Sources */,
-				5B4D9A472BCA10BE00968129 /*  .swift in Sources */,
+				5B835E3E2BFFE0170009EFEB /* SchedulePage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

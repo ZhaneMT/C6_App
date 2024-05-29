@@ -21,7 +21,7 @@ struct QS2: View {
                 Color(red: 0.25, green: 0.18, blue: 0.34)
                     .ignoresSafeArea()
                 VStack{
-                    Text("What days do you do go to Work/School?")
+                    Text("What days do you apply this routine?")
                         .font(.largeTitle)
                         .foregroundColor(.white)
                         .bold()
@@ -138,13 +138,13 @@ struct QS2: View {
                         .navigationBarBackButtonHidden(true)){
                         
                         Image(systemName:"chevron.right")
-                            .foregroundColor(Color(red: 0.48, green: 0.80, blue:0.37))
+                                .foregroundColor(.orange)
                             .bold()
                             .font(.title)
                         Text("Next")
                             .font(.title)
                             .bold()
-                            .foregroundColor(Color(red: 0.48, green: 0.80, blue:0.37))
+                            .foregroundColor(.orange)
                     }
                 }
             }

@@ -18,7 +18,7 @@ struct QS1: View{
                 VStack {
                     
                     Spacer()
-                    Text("Do you have Work or School?")
+                    Text("Do you have set routine?")
                         .font(.largeTitle)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.leading)
