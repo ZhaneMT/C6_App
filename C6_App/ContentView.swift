@@ -10,21 +10,17 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            HobbyList()
+            Achievement()
                 .tabItem{
-                    Label("Activities", systemImage:"theatermask.and.paintbrush.fill")
+                    Label("Achievements", systemImage:"trophy.fill")
                 }
             SchedulePage()
                 .tabItem{
                     Label("Schedule", systemImage: "list.clipboard")
                 }
-            Achievement()
+            HobbyList()
                 .tabItem {
-                    Label("Achievements", systemImage:"trophy.fill")
-                }
-          Settings()
-                .tabItem{
-                    Label("Settings", systemImage: "gearshape.fill")
+                    Label("Hobby List", systemImage:"theatermask.and.paintbrush.fill")
                 }
         }
         .onAppear() {

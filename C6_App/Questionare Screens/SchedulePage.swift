@@ -222,7 +222,7 @@ struct SecondScreen: View {
                             Text("Purple").tag(Color.purple)
                         }
                         .pickerStyle(MenuPickerStyle())
-                        .foregroundColor(.black)
+                        .tint(.black)
                     }
                 }
                 Spacer()
