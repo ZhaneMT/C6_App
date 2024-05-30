@@ -9,9 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-       
         TabView {
-            
             HobbyList()
                 .tabItem{
                     Label("Activities", systemImage:"theatermask.and.paintbrush.fill")
@@ -30,10 +28,15 @@ struct ContentView: View {
                 }
         }
         .onAppear() {
-            UITabBar.appearance().backgroundColor = .none
-        }
-        .tint(.green)
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .init(red: 0.20, green: 0.15, blue: 0.27, alpha:1.0)
+            UITabBar.appearance().standardAppearance = appearance
+            UITabBar.appearance().scrollEdgeAppearance = appearance
 
+        }
+        .tint(.orange)
+        
             //THE CODE FROM .OnAppear() to .tint all help change the colors of the tab bar.
         }
     }

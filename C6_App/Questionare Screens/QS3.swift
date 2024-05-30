@@ -75,14 +75,25 @@ struct QS3: View {
                                                 .font(.title)
                                                 .bold()
                                                 .foregroundColor(.white)
-                                            DatePicker("", selection: $WorkStartTimes[index], displayedComponents: .hourAndMinute)
-                                                .labelsHidden()
+                                            
+                                            ZStack {
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .fill(.gray)
+                                                    .opacity(0.5)
+                                                DatePicker("", selection: $WorkStartTimes[index], displayedComponents: .hourAndMinute)
+                                                    .labelsHidden()
+                                            }
                                             Text("-")
                                                 .font(.title)
                                                 .bold()
                                                 .foregroundColor(.white)
-                                            DatePicker("", selection: $WorkEndTimes[index], displayedComponents: .hourAndMinute)
-                                                .labelsHidden()
+                                            ZStack{
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .fill(.gray)
+                                                    .opacity(0.5)
+                                                DatePicker("", selection: $WorkEndTimes[index], displayedComponents: .hourAndMinute)
+                                                    .labelsHidden()
+                                            }
                                         }
                                     }
                                 } else {
@@ -95,12 +106,13 @@ struct QS3: View {
                         .navigationBarBackButtonHidden(true)) {
                             HStack {
                                 Image(systemName: "chevron.right")
-                                    .foregroundColor(.green)
                                     .bold()
                                     .font(.title)
+                                    .foregroundColor(.orange)
                                 Text("Next")
                                     .font(.title)
-                                    .foregroundColor(.green)
+                                    .bold()
+                                    .foregroundColor(.orange)
                             }
                         }
                 }
