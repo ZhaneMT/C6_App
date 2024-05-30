@@ -30,7 +30,6 @@ struct Settings: View {
                             .toggleStyle(SwitchToggleStyle(tint:.orange))
                             .font(.title)
                             .foregroundColor(.white)
-                        Divider()
                         Toggle("Light Mode", isOn: $LightMode)
                             .toggleStyle(SwitchToggleStyle(tint:.orange))
                             .font(.title)

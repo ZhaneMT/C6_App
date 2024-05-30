@@ -38,7 +38,7 @@ struct SchedulePage: View {
     @State private var tasks: [Task] = []
     
     var body: some View {
-        ZStack{
+        ZStack {
             Color(red: 0.25, green: 0.18, blue: 0.34)
                 .ignoresSafeArea()
             VStack {
@@ -54,7 +54,7 @@ struct SchedulePage: View {
                     Spacer()
                     Circle()
                         .frame(height: 80)
-                        .foregroundColor(  Color(red: 0.25, green: 0.18, blue: 0.34))
+                        .foregroundColor(Color(red: 0.25, green: 0.18, blue: 0.34))
                         .overlay(
                             Button { showSheet.toggle() } label: {
                                 Image(systemName: "plus.circle.fill")
@@ -66,10 +66,11 @@ struct SchedulePage: View {
                 .padding()
                 .sheet(isPresented: $showSheet) {
                     SecondScreen(showSheet: $showSheet, tasks: $tasks)
+                        .presentationDetents([.medium])
                 }
-                
+        
                 VStack {
-                    HStack{
+                    HStack {
                         Text(Date().printDay())
                             .font(.title)
                             .bold()
@@ -77,9 +78,6 @@ struct SchedulePage: View {
                             .fontDesign(.rounded)
                     }
                 }
-                //        }
-                //        Divider()
-                
                 ScrollView {
                     ForEach(0..<24) { hour in
                         VStack(alignment: .leading) {
@@ -89,22 +87,19 @@ struct SchedulePage: View {
                                         .bold()
                                         .font(.title2)
                                         .frame(width: 110, height: 50)
-                                        .background(Color(red: 0.48, green: 0.80, blue: 0.37)
-                                        )
+                                        .background(Color(red: 0.48, green: 0.80, blue: 0.37))
                                 } else if hour == 12 {
                                     Text("\(hour):00 PM").foregroundColor(.white)
                                         .bold()
                                         .font(.title2)
                                         .frame(width: 110, height: 50)
-                                        .background(Color(red: 0.48, green: 0.80, blue: 0.37)
-                                        )
+                                        .background(Color(red: 0.48, green: 0.80, blue: 0.37))
                                 } else {
                                     Text("\(hour - 12):00 PM").foregroundColor(.white)
                                         .bold()
                                         .font(.title2)
                                         .frame(width: 110, height: 50)
-                                        .background(Color(red: 0.48, green: 0.80, blue: 0.37)
-                                        )
+                                        .background(Color(red: 0.48, green: 0.80, blue: 0.37))
                                 }
                                 ZStack {
                                     Rectangle()
@@ -120,7 +115,6 @@ struct SchedulePage: View {
                                         .font(.headline)
                                         .foregroundColor(.white)
                                     Text("\(task.startTime.printHourMinute()) - \(task.endTime.printHourMinute())")
-                                    
                                         .font(.subheadline)
                                         .foregroundColor(.white)
                                 }
@@ -147,50 +141,79 @@ struct SecondScreen: View {
     @State private var selectedColor: Color = .green
     
     var body: some View {
-            ZStack{
-                //Color(red: 0.25, green: 0.18, blue: 0.34)
-                VStack{
+        ZStack {
+            Color(red: 0.16, green: 0.11, blue: 0.21)
+                .ignoresSafeArea()
+            VStack {
+                HStack {
+                    Spacer()
                     Button("Done") {
-                        
                         generator.notificationOccurred(.success)
                         let newTask = Task(title: taskTitle, startTime: startTime, endTime: endTime, color: selectedColor)
                         tasks.append(newTask)
                         showSheet = false
                     }
-                    .padding(.leading, 250.0)
                     .foregroundColor(.orange)
                     .font(.title2)
-                    
-                    Text("Create New Task")
-                        .font(.largeTitle)
-                        .bold()
+                }
+                .padding()
+                
+                Text("Create New Task")
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                    .bold()
+                    .foregroundColor(.white)
+                    .fontDesign(.rounded)
+                    .padding(.bottom, 20)
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.white)
+                        .frame(width: 380, height: 40)
+                        .opacity(0.5)
                     TextField("Title", text: $taskTitle)
-                        .textFieldStyle(.roundedBorder)
+                        .textFieldStyle(.plain)
                         .font(.title)
-                    
-                    HStack {
-                        Text("Time:")
-                            .font(.title)
-                        Spacer()
-                        ZStack{
-                            //RoundedRectangle(cornerRadius: 10)
-                                //.fill(.gray)
-                                //.opacity(0.5)
-                            DatePicker("", selection: $startTime, displayedComponents: .hourAndMinute)
-                                .labelsHidden()
-                        }
-                        Text("-")
-                            .bold()
-                        ZStack{
-                            //RoundedRectangle(cornerRadius: 10)
-                                //.fill(.gray)
-                                //.opacity(0.5)
-                            DatePicker("", selection: $endTime, displayedComponents: .hourAndMinute)
-                                .labelsHidden()
-                        }
+                        .frame(width: 350)
+                }
+                .padding(.bottom, 20)
+                
+                HStack {
+                    Text("Time:")
+                        .font(.title)
+                        .foregroundColor(.white)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.white)
+                            .frame(width: 90, height: 40)
+                            .opacity(0.5)
+                        DatePicker("", selection: $startTime, displayedComponents: .hourAndMinute)
+                            .labelsHidden()
                     }
-                    List {
-                        Picker("Tag Color", selection: $selectedColor) {
+                    Text("-")
+                        .bold()
+                        .foregroundColor(.white)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.white)
+                            .frame(width: 90, height: 40)
+                            .opacity(0.5)
+                        DatePicker("", selection: $endTime, displayedComponents: .hourAndMinute)
+                            .labelsHidden()
+                    }
+                }
+                .padding(.bottom, 20)
+                
+                HStack {
+                    Text("Tag Color:")
+                        .font(.title)
+                        .foregroundColor(.white)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.white)
+                            .frame(width: 100, height: 40)
+                            .opacity(0.5)
+                        Picker("Color", selection: $selectedColor) {
                             Text("Red").tag(Color.red)
                             Text("Orange").tag(Color.orange)
                             Text("Yellow").tag(Color.yellow)
@@ -198,10 +221,14 @@ struct SecondScreen: View {
                             Text("Blue").tag(Color.blue)
                             Text("Purple").tag(Color.purple)
                         }
+                        .pickerStyle(MenuPickerStyle())
+                        .foregroundColor(.black)
                     }
-                    .font(.title)
                 }
+                Spacer()
             }
+            .padding()
+        }
     }
 }
 
@@ -209,3 +236,4 @@ struct SecondScreen: View {
 #Preview {
     SchedulePage()
 }
+
